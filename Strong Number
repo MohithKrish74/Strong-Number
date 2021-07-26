@@ -1,0 +1,36 @@
+package com.company;
+
+import com.sun.jdi.Value;
+import com.sun.security.jgss.GSSUtil;
+import org.w3c.dom.ls.LSOutput;
+
+import java.security.spec.RSAOtherPrimeInfo;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int number=in.nextInt();
+        int new_number=number;
+        int sum=0;
+        int fact;
+        while (number>0)
+        {
+            fact=1;
+            int last=number%10;
+            for(int i=1;i<=last;i++)
+            {
+                fact = fact * i;
+            }
+            sum+=fact;
+            number/=10;
+        }
+        System.out.println((sum==new_number)?"Strong Number":"Not a Strong Number");
+
+
+
+    }
+}
+
